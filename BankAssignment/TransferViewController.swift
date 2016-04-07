@@ -8,8 +8,9 @@
 
 import UIKit
 
-class TransferViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class TransferViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
     @IBOutlet weak var transferSelect: UIPickerView!
+    @IBOutlet weak var transferAmountTextField: UITextField!
     var accountArray = ["Account 1 $"+"1000" , "Account 2 $"+"1000"];
     
     override func viewDidLoad() {
@@ -18,13 +19,23 @@ class TransferViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         transferSelect.dataSource=self
         
         self.transferButton.enabled=true;
-
+        
+        transferAmountTextField.delegate = self;
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder();
+        return true;
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true);
     }
     
 
