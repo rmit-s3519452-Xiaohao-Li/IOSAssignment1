@@ -105,7 +105,7 @@
                         <viewControllerLayoutGuide type="bottom" id="DrK-gQ-hXy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="O7W-3A-AJn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Transfer Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTk-TF-Fpv">
@@ -136,7 +136,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ig2-CQ-p1D"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="N2F-i0-Wkh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nI-9i-dRq">
@@ -212,12 +212,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <tabBar key="tableFooterView" contentMode="scaleToFill" id="PDx-3v-lub">
-                            <rect key="frame" x="0.0" y="149" width="600" height="49"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <items/>
-                        </tabBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="50g-5X-M02" detailTextLabel="xXT-L6-vCg" rowHeight="57" style="IBUITableViewCellStyleValue1" id="dIQ-TE-E9O">
                                 <rect key="frame" x="0.0" y="92" width="600" height="57"/>
@@ -255,26 +249,45 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DqR-Q3-j9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="441"/>
+            <point key="canvasLocation" x="922" y="449"/>
         </scene>
-        <!--Pay-->
-        <scene sceneID="uda-za-JNM">
+        <!--Pay Someone-->
+        <scene sceneID="tZu-Uy-F8I">
             <objects>
-                <viewController id="WNA-T9-duV" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5yd-2B-1eR"/>
-                        <viewControllerLayoutGuide type="bottom" id="bHU-Rm-I7t"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kX4-pf-ZiE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                <tableViewController id="I2b-fN-Sks" customClass="BankTableViewController" customModule="BankAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OU7-Zl-NfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Pay" id="STm-UM-12f"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t11-kv-hyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="aRT-e0-mSf" style="IBUITableViewCellStyleDefault" id="In9-LU-7d2">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="In9-LU-7d2" id="WDP-uX-yiN">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aRT-e0-mSf">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="I2b-fN-Sks" id="oa1-4Z-3pB"/>
+                            <outlet property="delegate" destination="I2b-fN-Sks" id="dR0-cp-Zmh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pay Someone" id="hED-Lc-BgK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73l-mF-mod" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1019" y="1368"/>
+            <point key="canvasLocation" x="1024" y="1400"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="K81-eU-hxL">
@@ -299,7 +312,7 @@
         <!--Account Summary-->
         <scene sceneID="Fhm-iS-hnn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="CE3-I1-gdu" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CE3-I1-gdu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account Summary" id="Xuu-vv-pxq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mr9-cQ-q3A">
@@ -307,10 +320,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+<<<<<<< Updated upstream
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="HZK-wj-xzx">
                         <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
+=======
+>>>>>>> Stashed changes
                     <connections>
                         <segue destination="oud-aw-Cp4" kind="relationship" relationship="rootViewController" id="TCy-0o-hag"/>
                     </connections>
@@ -322,7 +338,7 @@
         <!--Transfer-->
         <scene sceneID="gKJ-ZC-eBP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="nZF-dW-qsL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nZF-dW-qsL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Transfer" id="UWE-x2-bwK" userLabel="Transfer"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BHD-zg-n8d">
@@ -341,7 +357,7 @@
         <!--Pay Bills-->
         <scene sceneID="Paw-93-2bH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="V6t-Ez-pY4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V6t-Ez-pY4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Pay Bills" id="3hE-uz-xES"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cZR-OW-Qh4">
@@ -349,13 +365,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Ka9-Js-c7N">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="WNA-T9-duV" kind="relationship" relationship="rootViewController" id="esZ-e7-bsR"/>
+                        <segue destination="I2b-fN-Sks" kind="relationship" relationship="rootViewController" id="Egg-yz-LDq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3w-hZ-INm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="262" y="1368"/>
+            <point key="canvasLocation" x="248" y="1400"/>
         </scene>
     </scenes>
 </document>

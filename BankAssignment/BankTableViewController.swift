@@ -2,7 +2,7 @@
 //  BankTableViewController.swift
 //  PaySomeone
 //
-//  Created by Yin Liang on 16/4/3.
+//  Created by Yin Liang on 16/4/7.
 //  Copyright © 2016年 RMIT. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ class BankTableViewController: UITableViewController, UISearchResultsUpdating
     var matchPeople = [String]()
     var result : UISearchController!
     
-
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -30,19 +30,19 @@ class BankTableViewController: UITableViewController, UISearchResultsUpdating
         
         self.tableView.reloadData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if self.result.active
@@ -54,7 +54,7 @@ class BankTableViewController: UITableViewController, UISearchResultsUpdating
             return self.bankPeople.count
         }
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
@@ -71,14 +71,14 @@ class BankTableViewController: UITableViewController, UISearchResultsUpdating
         
         return cell!
     }
-
+    
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         self.matchPeople.removeAll(keepCapacity: false)
         
-        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+        let predicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
         
-        let array = (self.bankPeople as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        let array = (self.bankPeople as NSArray).filteredArrayUsingPredicate(predicate)
         
         self.matchPeople = array as! [String]
         
