@@ -9,15 +9,15 @@
 import UIKit
 
 class TransferViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    @IBOutlet weak var transferFromSelect: UIPickerView!
+    @IBOutlet weak var transferSelect: UIPickerView!
     var accountArray = ["Account 1 $"+"1000" , "Account 2 $"+"1000"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        transferFromSelect.delegate=self
-        transferFromSelect.dataSource=self
+        transferSelect.delegate=self
+        transferSelect.dataSource=self
         
-        self.transferButton.enabled=false;
+        self.transferButton.enabled=true;
 
         // Do any additional setup after loading the view.
     }
@@ -39,6 +39,8 @@ class TransferViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     */
     
     @IBOutlet weak var transferButton: UIBarButtonItem!
+   
+    
     
    
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -48,9 +50,9 @@ class TransferViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         return accountArray.count;
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
-    return 1
+    return 2
     }
-    
+
     
 
 }
