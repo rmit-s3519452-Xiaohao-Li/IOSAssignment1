@@ -1,14 +1,14 @@
 //
-//  BankAssignmentUITests.swift
-//  BankAssignmentUITests
+//  AccountSummaryUITest.swift
+//  BankAssignment
 //
-//  Created by Xiaohao Li on 4/04/2016.
+//  Created by Xiaohao Li on 9/04/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
 
 import XCTest
 
-class BankAssignmentUITests: XCTestCase {
+class AccountSummaryUITest: XCTestCase {
         
     override func setUp() {
         super.setUp()
@@ -31,6 +31,14 @@ class BankAssignmentUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        
+        //Test if there are 3 cells in the table view
+        XCTAssertEqual(app.tables.cells.count,3)
+        
+        //Test if there are 3 buttons in the view
+        XCTAssertEqual(app.buttons.count, 3)
     }
     
 }

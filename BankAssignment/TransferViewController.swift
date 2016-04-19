@@ -10,7 +10,7 @@ import UIKit
 
 class TransferViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var transferSelect: UIPickerView!
-    var accountArray = ["Account 1 $"+"1000" , "Account 2 $"+"1000"];
+    var accountArray = ["Account 1", "Account 2"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +51,10 @@ class TransferViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
     return 2
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
     
